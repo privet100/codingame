@@ -18,7 +18,7 @@ int main()
         int remaining_turns;
         scanf("%d", &remaining_turns);
 
-        if      (initial_tx < light_x && initial_ty > light_y )
+        if      (initial_tx < light_x && initial_ty > light_y)
         {
             printf("NE\n");
             initial_tx++;
@@ -44,7 +44,7 @@ int main()
         }
         else if (initial_ty > light_y)
             printf("N\n");
-        else if (initial_tx < light_x )
+        else if (initial_tx < light_x)
             printf("E\n");
         else if (initial_ty < light_y)
             printf("S\n");
