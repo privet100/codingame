@@ -3,6 +3,13 @@
 #include <string.h>
 #include <stdbool.h>
 
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ * ---
+ * Hint: You can use the debug stream to print initialTX and initialTY, if Thor seems not follow your orders.
+ **/
+
 int main()
 {
     // the position of the light of power
@@ -11,10 +18,10 @@ int main()
     // Thor's starting position
     int initial_tx;
     int initial_ty;
-
     scanf("%d%d%d%d", &light_x, &light_y, &initial_tx, &initial_ty);
 
     while (1) {
+        // The remaining amount of turns Thor can move. Do not remove this line.
         int remaining_turns;
         scanf("%d", &remaining_turns);
 
@@ -43,25 +50,13 @@ int main()
             initial_ty--;
         }
         else if (initial_ty >  light_y)
-        {
             printf("N\n");
-            initial_ty--;
-        }
         else if (initial_tx <  light_x )
-        {
             printf("E\n");
-            initial_tx++;
-        }
         else if (initial_ty <  light_y)
-        {
             printf("S\n");
-            initial_ty++;
-        }
         else if (initial_tx >  light_x)
-        {
             printf("W\n");
-            initial_tx--;
-        }
     }
 
     return 0;
